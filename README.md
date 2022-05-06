@@ -1,2 +1,7 @@
-# project_template
-Template for new projects
+# Title
+
+# Associated Publications
+
+# Installation
+
+# Contributors
