@@ -2,3 +2,4 @@
 *.so
 *.Python
 *.cache
+*.ipynb_checkpoints/*
