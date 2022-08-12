@@ -1,0 +1,17 @@
+name: project-name
+channels:
+  - conda-forge
+dependencies:
+  - ipywidgets
+  - matplotlib
+  - numpy
+  - pandas
+  - pre-commit
+  - scipy
+  - seaborn
+  - scikit-learn
+  - tqdm
+  - watermark
+  - pip
+  - pip:
+    - pacmap
