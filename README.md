@@ -1,1 +1,9 @@
-Click on the green "Use this template" button above to create a new repository.
+Project Name
+---
+Description
+
+Contributors
+---
+
+Associated Publications
+---
