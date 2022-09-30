@@ -1,7 +1,7 @@
 Project Name
 ---
 1. Insert description here.
-2. Rename repo with a 4 digit year-of-completion prefix, e.g., "2022-"; this can be updated later.
+2. Rename repo with a 4 digit year-of-completion prefix, e.g., "2022-"; this can be updated later. Convention is to use hyphens between words and all lower case.
 3. Create a [conda](https://www.anaconda.com/) environment for this project.  First modify `conda-env.yml` to include the relevant repositories and dependencies needed; also give the environment a good name (e.g., similar or same as this repo). Then create the environment (see below).
 
 Installation
