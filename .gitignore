@@ -1,6 +1,7 @@
-*__pycache__/*
+__pycache__
 *.so
+*.o
 *.Python
 *.cache
-*.ipynb_checkpoints/*
-*/data/raw/*
+/**/.ipynb_checkpoints/
+data/raw/*
