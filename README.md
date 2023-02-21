@@ -14,6 +14,8 @@ $ conda env create -f conda-env.yml
 
 Contributors
 ---
+Update the CITATION.cff file to enable appropriate citations.  Also update [zenodo](https://zenodo.org/) information to facilitate easy citation, if desired.
+
 
 Associated Publications
 ---
