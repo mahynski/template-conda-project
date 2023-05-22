@@ -6,7 +6,6 @@ Project Name
 
 Installation
 ---
-
 Set up the conda environment for this project.
 ```code
 $ conda env create -f conda-env.yml
@@ -14,8 +13,11 @@ $ conda env create -f conda-env.yml
 
 Contributors
 ---
-Update the CITATION.cff file to enable appropriate citations.  Also update [zenodo](https://zenodo.org/) information to facilitate easy citation, if desired.
+Update the CITATION.cff file to enable appropriate citations.  
 
+Versioning
+---
+Create a "published" branch to correspond to the repo when the associated paper is published.  Subsequent branches, such as "revision-YYYY-MM-DD" can be created later.  Also use [zenodo](https://zenodo.org/) to facilitate easy citation, if desired, and point it to the "published" branch.  This leaves the main branch as the latest version which can be updated as needed.
 
 Associated Publications
 ---
