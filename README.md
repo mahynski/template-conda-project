@@ -17,7 +17,8 @@ Update the CITATION.cff file to enable appropriate citations.
 
 Versioning
 ---
-Create a "published" branch to correspond to the repo when the associated paper is published.  Subsequent branches, such as "revision-YYYY-MM-DD" can be created later.  Also use [zenodo](https://zenodo.org/) to facilitate easy citation, if desired, and point it to the "published" branch.  This leaves the main branch as the latest version which can be updated as needed.
+* Use the [public-template](https://github.com/mahynski/public-template) to create a fresh repo to release the code and details after a manuscript is published, tag the release, then use zenodo to capture changes to future changes/releases made to that repo. This serves as the primary **public facing** repo.
+* In addition, create a "published" branch to correspond to this repo when the associated paper is published.  Subsequent branches, such as "revision-YYYY-MM-DD" can be created later and similarly reflected in the public-template version if revisions are necessary. This is retained as the primary **private** repo where future work can be done.
 
 Associated Publications
 ---
