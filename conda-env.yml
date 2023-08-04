@@ -2,6 +2,7 @@ name: project-name
 channels:
   - conda-forge
 dependencies:
+  - ipykernel
   - ipywidgets
   - matplotlib
   - numpy
