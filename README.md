@@ -9,6 +9,7 @@ Installation
 Set up the conda environment for this project.
 ```code
 $ conda env create -f conda-env.yml
+$ conda activate PROJECT-NAME
 $ python -m ipykernel install --user --name=PROJECT-NAME
 ```
 
