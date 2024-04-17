@@ -16,7 +16,7 @@ $ python -m ipykernel install --user --name=PROJECT-NAME
 It is also useful to export the entire conda environment for posterity.
 ```code
 $ conda env export > environment.yml
-```code
+```
 
 Contributors
 ---
