@@ -3,20 +3,21 @@ Project Name
 1. Insert description here.
 2. Rename repo with a 4 digit year-of-completion prefix, e.g., "2022-"; this can be updated later. Convention is to use hyphens between words and all lower case.
 3. Create a [conda](https://www.anaconda.com/) environment for this project.  First modify `conda-env.yml` to include the relevant repositories and dependencies needed; also give the environment a good name (e.g., similar or same as this repo) - the default is "project-env". Then create the environment (see below).
-4. If you do not want to work in a development container, skip to Installation to use a conda environment on your local machine.
-5. Otherwise, a Docker [dev container](https://code.visualstudio.com/docs/devcontainers/containers) template for [VS Code](https://code.visualstudio.com/) is provided in the `.devcontainer/` folder.  This creates a [miniconda](https://docs.anaconda.com/miniconda/) container and installs the environment specified in `conda-env.yml`. To use:
+4. If you do not want to work in a development container, skip to "Local Installation" to use a conda environment on your local machine.
+5. Otherwise, a Docker [dev container](https://code.visualstudio.com/docs/devcontainers/containers) template for [VS Code](https://code.visualstudio.com/) is provided in the `.devcontainer/` folder.  This creates a [miniconda](https://docs.anaconda.com/miniconda/) container and installs the environment specified in `conda-env.yml` into the default IPython kernel in the container. To use:
    * Change the `UID` and `GID` in `.devcontainer/Dockerfile` if needed.
    * Change the name of the conda environment (default="project-env") in the `conda-env.yml` and files in .devcontainer/.
-   * After `git clone` this repo, [open the folder in the container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container).
-   * In the container, run the `.devcontainer/start_jupyter.sh` script to run a Jupyter server (forwarded on port 1234 by default).
+   * Install the "Dev Containers" Extension in VS Code.
+   * First `git clone` this repo, then [open the folder in the container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) by selecting "Dev Containers: Open Folder in Container" from the Command Palette.
+   * From a terminal in VS Code, run `$ bash .devcontainer/start_jupyter.sh` to launch a Jupyter server (forwarded on port 1234 by default) from the head of the repo.  The default kernel contains the `conda-env.yml` packages but is not renamed.
 
-Installation
+Local Installation
 ---
-Set up the conda environment for this project.
+Set up the conda environment for this project. You will need to install the environment in your Jupyter to use it (third command below). Change the name of the conda environment (default="project-env") in the `conda-env.yml` if you wish.
 ```code
 $ conda env create -f conda-env.yml
-$ conda activate PROJECT-NAME
-$ python -m ipykernel install --user --name=PROJECT-NAME
+$ conda activate project-env
+$ python -m ipykernel install --user --name=project-env
 ```
 
 It is also useful to export the entire conda environment for posterity, especially if not working in a development container.

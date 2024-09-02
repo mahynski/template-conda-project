@@ -4,6 +4,7 @@ channels:
 dependencies:
   - ipykernel
   - ipywidgets
+  - notebook
   - pre-commit
   - matplotlib
   - numpy
