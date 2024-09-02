@@ -1,4 +1,4 @@
-Project Name
+How To Use
 ---
 1. Insert description here.
 2. Rename repo with a 4 digit year-of-completion prefix, e.g., "2022-"; this can be updated later. Convention is to use hyphens between words and all lower case.
