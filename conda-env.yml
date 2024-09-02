@@ -1,18 +1,18 @@
-name: PROJECT-NAME
+name: project-env
 channels:
   - conda-forge
 dependencies:
   - ipykernel
   - ipywidgets
+  - pre-commit
   - matplotlib
   - numpy
   - pandas
-  - pre-commit
   - scipy
+  - plotly
   - seaborn
   - scikit-learn
   - tqdm
-  - watermark
   - pip
   - pip:
-    - pacmap
+    - watermark
