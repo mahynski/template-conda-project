@@ -2,9 +2,9 @@ name: project-env
 channels:
   - conda-forge
 dependencies:
-  - ipykernel
+  - ipykernel # Must be specified for .devcontainers to work correctly
+  - notebook # Must be specified for .devcontainers to work correctly
   - ipywidgets
-  - notebook
   - pre-commit
   - matplotlib
   - numpy
