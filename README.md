@@ -29,6 +29,8 @@ Contributors
 ---
 Update the CITATION.cff file to enable appropriate citations.  
 
+The logo for this repository (logo.png) was generated using Google Gemini on Nov. 28, 2024 with the prompt "Create a logo for a GitHub repository that is a coding template."
+
 Versioning
 ---
 * Use the [public-template](https://github.com/mahynski/public-template) to create a fresh repo to release the code and details after a manuscript is published, tag the release, then use zenodo to capture changes to future changes/releases made to that repo. This serves as the primary **public facing** repo.
