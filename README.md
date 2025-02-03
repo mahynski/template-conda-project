@@ -20,9 +20,14 @@ $ conda activate project-env
 $ python -m ipykernel install --user --name=project-env
 ```
 
-It is also useful to export the entire conda environment for posterity, especially if not working in a development container.
+At the end of a project it is good practice to export the entire conda environment for posterity, especially if not working in a development container.
 ```code
 $ conda env export > environment.yml
+```
+
+This environment can be recreated later; the `conda-env.yml` file can also be exchanged for this, but I prefer to keep both as a record.
+```code
+$ conda env create -f environment.yml
 ```
 
 Contributors
