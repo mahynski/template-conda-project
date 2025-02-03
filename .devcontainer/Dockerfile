@@ -1,4 +1,5 @@
 FROM continuumio/miniconda3:latest
+RUN apt update
 
 # Create a user with a given User and Group ID
 # https://vsupalov.com/docker-shared-permissions/
