@@ -34,7 +34,7 @@ Contributors
 ---
 Update the CITATION.cff file to enable appropriate citations.  
 
-The logo for this repository (logo.png) was generated using Google Gemini (Imagen 3) on Nov. 28, 2024 with the prompt "Create a logo for a GitHub repository that is a coding template."
+The logo for this repository (logo.png) was generated using Google Gemini 2.0 Flash (Imagen 3) on Feb. 19, 2025 with the prompt "Create a logo of a robotic bird being designed and templated by a robot in a factory."
 
 Versioning
 ---
