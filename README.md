@@ -33,6 +33,8 @@ This environment can be recreated later; the `conda-env.yml` file can also be ex
 $ conda env create -f environment.yml
 ```
 
+This works for many cases, but if you need an *exactly reproducible* environment use [conda-lock](https://github.com/conda/conda-lock) instead.
+
 Contributors
 ---
 Update the CITATION.cff file to enable appropriate citations.  
