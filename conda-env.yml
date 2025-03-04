@@ -2,18 +2,18 @@ name: project-env
 channels:
   - conda-forge
 dependencies:
-  - ipykernel # Must be specified for .devcontainers to work correctly
-  - notebook # Must be specified for .devcontainers to work correctly
-  - ipywidgets
-  - pre-commit
-  - matplotlib
-  - numpy
-  - pandas
-  - scipy
-  - plotly
-  - seaborn
-  - scikit-learn
-  - tqdm
   - pip
   - pip:
+    - ipykernel # Must be specified for .devcontainers to work correctly
+    - notebook # Must be specified for .devcontainers to work correctly
+    - ipywidgets
+    - pre-commit
+    - matplotlib
+    - numpy
+    - pandas
+    - scipy
+    - plotly
+    - seaborn
+    - scikit-learn
+    - tqdm
     - watermark
