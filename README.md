@@ -9,8 +9,8 @@ How To Use
 4. If you do not want to work in a development container, skip to "Local Installation" to use a conda environment on your local machine.
 5. Otherwise, a Docker [dev container](https://code.visualstudio.com/docs/devcontainers/containers) template for [VS Code](https://code.visualstudio.com/) is provided in the `.devcontainer/` folder.  This creates a [miniconda](https://docs.anaconda.com/miniconda/) container and installs the environment specified in `conda-env.yml` into the default IPython kernel in the container. To use:
    * Change the `UID` and `GID` in `.devcontainer/Dockerfile` if needed.
-   * If you want to connect to other containers, e.g., running ollama for code assitance in [Continue](https://docs.continue.dev/), you need to consider [Docker networking](https://docs.docker.com/engine/network/tutorials/standalone/).
-   * Add additional argunents as needed, e.g., "runArgs": {"--gpus", "all"} to [access host gpus](https://stackoverflow.com/questions/25185405/using-gpu-from-a-docker-container).
+   * If you want to connect to other containers, e.g., running ollama for code assitance in [Continue](https://docs.continue.dev/), you need to consider [Docker networking](https://docs.docker.com/engine/network/tutorials/standalone/). You can skip this and ollama will bind to your localhost on the default "bridge" network, which is acceptable on personal devices.
+   * Add [additional arguments](https://containers.dev/implementors/json_reference/) as needed, e.g., "runArgs": ["--gpus all"] to [access host gpus](https://stackoverflow.com/questions/25185405/using-gpu-from-a-docker-container). You may have to install the appropriate drivers first.
    * Change the name of the conda environment (default="project-env") in the `conda-env.yml` and files in .devcontainer/.
    * Install the "Dev Containers" Extension in VS Code.
    * First `git clone` this repo, then [open the folder in the container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) by selecting "Dev Containers: Open Folder in Container" from the Command Palette.
