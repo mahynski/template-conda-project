@@ -15,10 +15,13 @@ How To Use
    * Install the "Dev Containers" Extension in VS Code.
    * First `git clone` this repo, then [open the folder in the container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) by selecting "Dev Containers: Open Folder in Container" from the Command Palette.
    * From a terminal in VS Code, (1) navigate to your desired starting point (`data/analysis` is recommended), then (2) run `$ bash /path/to/.devcontainer/start_jupyter.sh` to launch a Jupyter server (forwarded on port 1234 by default) from the head of the repo.  The default kernel contains the `conda-env.yml` packages but is not renamed.
+     * Note that this installs the `project-env` jupyter kernel automatically. 
 
 Local Installation
 ---
+
 Set up the conda environment for this project. You will need to install the environment in your Jupyter to use it (third command below). Change the name of the conda environment (default="project-env") in the `conda-env.yml` if you wish.
+
 ```code
 $ conda env create -f conda-env.yml
 $ conda activate project-env
@@ -39,15 +42,18 @@ This works for many cases, but if you need an *exactly reproducible* environment
 
 Contributors
 ---
+
 Update the CITATION.cff file to enable appropriate citations.  
 
 The logo for this repository (logo.png) was generated using Google Gemini 2.0 Flash (Imagen 3) on Feb. 19, 2025 with the prompt "Create a logo of a robotic bird being designed and templated by a robot in a factory."
 
 Versioning
 ---
+
 * Use the [public-template](https://github.com/mahynski/public-template) to create a fresh repo to release the code and details after a project is finished, tag the release, then use zenodo to capture changes to future changes/releases made to that repo, if a public record is desired. That serves as the primary **public** repo which is shared with external parties.
 * In addition, create a "published" branch on this repo to correspond to when the associated results/paper/report was first published or shared. This repo is retained as the primary **private** version where future work can be performed. Subsequent branches, such as "revision-YYYY-MM-DD" can be created later and similarly reflected in the public-template version if revisions are necessary. 
 
 Associated Publications
 ---
+
 [LINK TO REPORT]()
