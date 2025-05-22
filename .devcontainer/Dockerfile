@@ -14,6 +14,7 @@ COPY conda-env.yml /
 # Create conda env
 RUN conda env create -f conda-env.yml
 
+# ------------------------------------------------------------------- #
 # Make RUN commands use bash not sh -necessary to make conda work
 SHELL ["/bin/bash", "--login", "-c"]
 
@@ -27,3 +28,4 @@ RUN conda activate project-env \
 # Install notebook outside of project-env (in base)
 # Run in base conda env so it knows about pip
 RUN conda run pip install notebook python-dotenv mlflow
+# ------------------------------------------------------------------- #
