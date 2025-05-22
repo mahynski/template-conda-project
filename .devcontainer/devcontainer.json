@@ -18,5 +18,5 @@
 			"extensions": []
 		}
 	},
-	"forwardPorts": [1234] // Forward Jupyter port
+	"forwardPorts": [1234, 1235] // Forward Jupyter port and MLFlow
 }
