@@ -1,5 +1,7 @@
 // See https://containers.dev/guide/dockerfile for guide
 // Also see https://containers.dev/implementors/json_reference/#image-specific
+// Docker Desktop configuration for GPUs: https://docs.docker.com/desktop/features/gpu/
+// Accessing GPUs in VSCode devcontainer: https://stackoverflow.com/questions/72129213/using-gpu-in-vs-code-container
 {
     "name": "Jupyter Env",
     "runArgs": [
