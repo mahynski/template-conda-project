@@ -4,8 +4,8 @@
     "name": "Jupyter Env",
     "runArgs": [
 	"--gpus",
-	"all", # If gpus are present this enables docker to see them; if using windows, be sure docker(desktop) is correctly configured (see link above)
-	"--ipc=host" # https://discuss.pytorch.org/t/unable-to-write-to-file-torch-18692-1954506624/9990
+	"all", // If gpus are present this enables docker to see them; if using windows, be sure docker(desktop) is correctly configured (see link above)
+	"--ipc=host" // https://discuss.pytorch.org/t/unable-to-write-to-file-torch-18692-1954506624/9990
     ],
     "build": {
         "dockerfile": "Dockerfile",
