@@ -2,6 +2,7 @@ name: project-env
 channels:
   - conda-forge
 dependencies:
+  - python=3.12
   - pip
   - pip:
     - ipykernel # Must be specified for .devcontainers to work correctly
