@@ -16,16 +16,30 @@ How To Use
    * First `git clone` this repo, then [open the folder in the container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) by selecting "Dev Containers: Open Folder in Container" from the Command Palette.
    * From a terminal in VS Code, (1) navigate to your desired starting point (`data/analysis` is recommended), then (2) run `$ bash /path/to/.devcontainer/start_jupyter.sh` to launch a Jupyter server (forwarded on port 1234 by default) from the head of the repo.  The default kernel contains the `conda-env.yml` packages but is not renamed.
 
+### Setup SSH Keys
+
+If you are using this inside a devcontainer you will need to add an ssh key to push changes directly back to your Git account. Follow the instructions below inside your container, OR commit/push changes from a terminal outside of your container.
+
+~~~bash
+$ ssh-keygen -t ed25519 # Create a key - press enter each time you are prompted
+$ cat ~/.ssh/id_ed25519.pub # Copy the contents of this file 
+~~~
+
+Go to `User settings > SSH Keys` on your GitLab account or `User > Settings > SSH and GPG Keys` on GitHub. Click `Add new key` and copy the contents above into the `Key` area.  Give it a title and expiration date, then click `Add key`.
+
 Local Installation
 ---
 
-Set up the conda environment for this project. You will need to install the environment in your Jupyter to use it (third command below). Change the name of the conda environment (default="project-env") in the `conda-env.yml` if you wish.
+You can easily set up the conda environment for this project on your local (non virtual) machine if you do not want to use a devcontainer. You will need to install the environment in your Jupyter kernel to use it (third command below); this is handled automatically in the devcontainer approach. Change the name of the conda environment (default="project-env") in the `conda-env.yml` if you wish.
 
 ```code
 $ conda env create -f conda-env.yml
 $ conda activate project-env
 $ python -m ipykernel install --user --name=project-env
 ```
+
+Maintaining Provenance
+---
 
 At the end of a project it is good practice to export the entire conda environment for posterity, especially if not working in a development container.
 ```code
