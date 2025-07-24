@@ -1,5 +1,5 @@
 FROM continuumio/miniconda3:latest
-RUN apt update -y
+# RUN apt update -y
 
 # Create a user with a given User and Group ID
 # https://vsupalov.com/docker-shared-permissions/
@@ -11,10 +11,12 @@ RUN adduser --disabled-password --gecos '' --uid $UID --gid $GID user
 USER user
 COPY conda-env.yml /
 
-# Create conda env
-RUN conda env create -f conda-env.yml
+ENV PYTHONDONTWRITEBYTECODE=true
 
-# ------------------------------------------------------------------- #
+# Create conda env
+RUN conda env create -f conda-env.yml \
+ && conda clean -afy
+
 # Make RUN commands use bash not sh -necessary to make conda work
 SHELL ["/bin/bash", "--login", "-c"]
 
@@ -25,7 +27,7 @@ RUN conda init bash
 RUN conda activate project-env \
  && python -m ipykernel install --user --name=project-env
 
-# Install notebook outside of project-env (in base)
+# Install notebook outside of environments
 # Run in base conda env so it knows about pip
-RUN conda run pip install notebook python-dotenv mlflow
-# ------------------------------------------------------------------- #
+RUN conda run pip install notebook python-dotenv mlflow \
+ && conda clean -afy
