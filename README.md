@@ -16,7 +16,7 @@
 
 2. It is recommended that you open this in [VS Code](https://code.visualstudio.com/) and make use of [devcontainers](https://code.visualstudio.com/docs/devcontainers/containers) to create a containerized environment. While not necessary, the tools below are configured for this and work best under this setting.
 
-3. If you do not want to work in a devcontainer the instructions below will simply create a conda environment on your local machine. You will need to [install conda](https://www.anaconda.com/) before proceeding, though. Otherwise, from the Command Palette, select ["Reopen in Container"](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) to build your containerized environment with miniconda included. Here are some details to take care of first:
+3. If you do not want to work in a devcontainer the instructions below will simply create a conda environment on your local machine. You will need to [install conda](https://www.anaconda.com/) before proceeding, though. Otherwise, from the Command Palette, select ["Reopen in Container"](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) to build your containerized environment with miniconda included. When build, a default conda environment is created from `conda-env.yml`, but you can create more in the future. Here are some details to take care of first:
 
    * Install the "Dev Containers" Extension in VS Code.
    * Change the `UID` and `GID` in `.devcontainer/Dockerfile` if needed.
@@ -25,7 +25,7 @@
    * Optionally, modify `conda-env.yml` to include the relevant repositories and dependencies needed.
    * Optionally, change the name of the conda environment (default="project-env") in the `conda-env.yml` and files in .devcontainer/.
 
-4. Virtual environments are managed with [conda](https://www.anaconda.com/). By default, a "base" environment created in the root directory that contains Jupyter and MLFlow if you are using a devcontainer. The idea is that these can be executed as independent servers to which other code/process/environments can connect. This base environment in installed automatically when the container is built.
+4. Virtual environments are managed with [conda](https://www.anaconda.com/). By default, a "base" environment created in the root directory that contains Jupyter and MLFlow if you are using a devcontainer. The idea is that these can be executed as independent servers to which other code/process/environments can connect. This base environment in installed automatically when the container is built. You can create other projects with other conda environments as needed; it recommended that you do this in the `projects/` directory.
      
 5. If you are using a devcontainer, you can start the Jupyter and MLFlow servers without having to activate any environment (since they are in the base conda environment). The commands below work fine for local installations, but watch for conflicts on the default ports if you are running multiple instances simultaneously. You can change these as needed in the respective `.devcontainer/start_*` files. Do the following from different terminals:
 
