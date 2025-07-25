@@ -29,5 +29,5 @@ RUN conda activate project-env \
 
 # Install notebook outside of environments
 # Run in base conda env so it knows about pip
-RUN conda run pip install notebook python-dotenv mlflow \
+RUN conda run pip install mlflow jupyterlab pydantic-settings python-dotenv \
  && conda clean -afy
