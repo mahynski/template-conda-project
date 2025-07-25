@@ -33,16 +33,41 @@
    $ bash .devcontainer/start_jupyter.sh # Default is to https://127.0.0.1:1234
    $ bash .devcontainer/start_mlflow.sh # Default is to https://127.0.0.1:1235
    ~~~
-   
+
 ## Local Installation
 
 You can easily set up the conda environment for this project on your local (non virtual) machine if you do not want to use a devcontainer. You will need to install the environment in your Jupyter kernel to use it (third command below); this is handled automatically in the devcontainer approach. Change the name of the conda environment (default="project-env") in the `conda-env.yml` if you wish.
 
-```code
+~~~bash
 $ conda env create -f conda-env.yml
 $ conda activate project-env
 $ python -m ipykernel install --user --name=project-env
-```
+~~~
+
+## Using Conda
+
+### General Philosophy of Projects
+
+["Projects"](https://docs.astral.sh/uv/concepts/projects/) are intended to be sequestered bodies of work organized inside a single root directory. Each has its own virtual environment to manage their dependencies separately from others so you can create different projects as needed, e.g., inside some master `projects/` directory. To create a new project:
+
+~~~bash
+$ mkdir projects/new_project
+$ cd projects/new_project
+$ touch conda-env.yml # Fill this out as desired
+$ conda env create -f conda-env.yml
+~~~
+
+### Jupyter Kernels
+
+It is recommended that you create independent kernels in Jupyter for each project. This way there is a single installation of Jupyter only single server running.
+
+~~~bash
+$ cd projects/new_project
+$ conda activate new_project_env # Ensure 'ipykernel' is included in this environment
+$ python -m ipykernel install --user --name=project-env
+~~~
+
+Anything you install in the notebook will be installed in the environment but will not be reflected in the `conda-env.yml` file.  Anything you install "normally" in this environment, e.g., via `pip install`, will be avilable in Jupyter notebooks running this kernel.
 
 ## Setup SSH Keys
 
