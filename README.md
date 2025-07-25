@@ -25,7 +25,13 @@
    * First `git clone` this repo, then [open the folder in the container](https://code.visualstudio.com/docs/devcontainers/containers#_quick-start-open-an-existing-folder-in-a-container) by selecting "Dev Containers: Open Folder in Container" from the Command Palette.
    * From a terminal in VS Code, (1) navigate to your desired starting point (`data/analysis` is recommended), then (2) run `$ bash /path/to/.devcontainer/start_jupyter.sh` to launch a Jupyter server (forwarded on port 1234 by default) from the head of the repo.  The default kernel contains the `conda-env.yml` packages but is not renamed.
    * MLFlow: From a terminal in VS Code run `$ bash /path/to/.devcontainer/start_mlflow.sh` (uri is 127.0.0.1:1235 by default). The logs are stored in an sqlite database in `.devcontainer/mlflow/mlruns.db`. 
+5. If you are using a devcontainer, you can start the Jupyter and MLFlow servers without having to activate any environment (these were installed in the base conda environment when the container was create). The commands below work fine for local installations, but watch for conflicts on the default ports if you are running multiple instances simultaneously. You can change these as needed in the respective `.devcontainer/start_*` files. Do the following from different terminals:
 
+   ~~~bash
+   $ bash .devcontainer/start_jupyter.sh # Default is to https://127.0.0.1:1234
+   $ bash .devcontainer/start_mlflow.sh # Default is to https://127.0.0.1:1235
+   ~~~
+   
 ## Local Installation
 
 You can easily set up the conda environment for this project on your local (non virtual) machine if you do not want to use a devcontainer. You will need to install the environment in your Jupyter kernel to use it (third command below); this is handled automatically in the devcontainer approach. Change the name of the conda environment (default="project-env") in the `conda-env.yml` if you wish.
